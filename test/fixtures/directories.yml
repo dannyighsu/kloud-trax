@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  service: MyString
+  filepath: MyString
+  excluded: false
+
+two:
+  service: MyString
+  filepath: MyString
+  excluded: false

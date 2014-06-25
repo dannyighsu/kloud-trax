@@ -1,0 +1,78 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div.center.hero-unit {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: rgba(100, 100, 100, 0.5);
+    text-align: center;
+    color: white;
+
+    #signin {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        img {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.field {
+    label {
+        font-size: 20px;
+    }
+}
+
+#signup {
+    -moz-box-shadow:inset 0px 1px 0px 0px #d197fe;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #d197fe;
+    box-shadow:inset 0px 1px 0px 0px #d197fe;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a53df6), color-stop(1, #460080) );
+    background:-moz-linear-gradient( center top, #a53df6 5%, #460080 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a53df6', endColorstr='#460080');
+    background-color:#a53df6;
+    -webkit-border-top-left-radius:20px;
+    -moz-border-radius-topleft:20px;
+    border-top-left-radius:20px;
+    -webkit-border-top-right-radius:20px;
+    -moz-border-radius-topright:20px;
+    border-top-right-radius:20px;
+    -webkit-border-bottom-right-radius:20px;
+    -moz-border-radius-bottomright:20px;
+    border-bottom-right-radius:20px;
+    -webkit-border-bottom-left-radius:20px;
+    -moz-border-radius-bottomleft:20px;
+    border-bottom-left-radius:20px;
+    text-indent:0;
+    border:1px solid #9c33ed;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    font-style:normal;
+    height:40px;
+    line-height:35px;
+    width:175px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #7d15cd;
+    margin-top: 25px;
+    cursor: default;
+
+    &:hover {
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #460080), color-stop(1, #a53df6) );
+        background:-moz-linear-gradient( center top, #460080 5%, #a53df6 100% );
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#460080', endColorstr='#a53df6');
+        background-color:#460080;
+    }.classname:active {
+        position:relative;
+        top:1px;
+    }
+}

@@ -1,0 +1,13 @@
+<div class='center hero-unit'>
+  <%= form_for(@user) do |f| %>
+    <%= render 'fields', :f => f %>
+    <div>
+      <%= f.submit "Set Username", :id => 'signup' %>
+    </div>
+    <div id="errors">
+      <% flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, class: name %>
+      <% end -%>
+    </div>
+  <% end %>
+</div>

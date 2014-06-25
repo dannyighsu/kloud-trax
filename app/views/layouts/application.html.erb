@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield :head %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<<<<<<< HEAD
+  <script src="/assets/audio.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+  <script type="text/javascript" src="https://kloudless-static-assets.s3-us-west-2.amazonaws.com/p/platform/sdk/kloudless.authenticator.v0.1.js"></script>
+  <script type="text/javascript" src="assets/JavaScript-ID3-Reader-master/dist/id3-minimized.js"></script>
+  <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/kloudless-static-assets/p/platform/sdk/kloudless.explorer.js"></script>
+
+  <script type="text/javascript">
+    function qualifyURL(url) {
+    	var a = document.createElement('a');
+    	a.href = url;
+    	return a.href;
+    }
+  </script>
+
+=======
+  <div id="user_nav">
+  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+  </div> 
+>>>>>>> b6b0969... Setting up simple OmniAuth
+</head>
+<body>
+
+  <div id='logo'><a href='/'><h1>KloudTrax</h1></a></div>
+  <%= yield %>
+  <div class="footer navbar-fixed-bottom" id='foot'>
+    <%= render 'layouts/footer' %>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<% content_for :head do %>
+  <% "#{current_user.username}'s Kloud Stream" %>
+<% end %>
+
+<script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+</script>
+
+<style>
+  #logo {
+    margin-top: -5px;
+  }
+  body {
+    width: calc(100% - 300px);
+  }
+</style>
+
+<div class='overlay'>
+  <div class="header navbar-fixed-top" id='head'>
+    <%= render 'player/header' %>
+  </div>
+
+  <div id='controls'>
+    <%= render 'player/controls' %>
+  </div>
+
+  <div id='preferences'></div>
+
+  <div id='sidebar'>
+    <%= render 'player/sidebar' %>
+    <img src=<%= asset_url('slide-arrow-2.png') %> id='slide-arrow'>
+  </div>
+
+  <div id='tracks'>
+    <%= render 'player/tracks' %>
+  </div>
+</div>

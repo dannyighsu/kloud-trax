@@ -1,0 +1,6 @@
+<% trackList = getTracks %>
+<% if trackList.length != 0 %>
+  <%= render 'tracks/list' %>
+<% else %>
+  <%= render 'tracks/none' %>
+<% end %>

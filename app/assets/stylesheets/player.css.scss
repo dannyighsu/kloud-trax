@@ -1,0 +1,172 @@
+// Place all the styles related to the Player controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.overlay {
+    top: 0px;
+    left: 0px;
+    height: calc(100% - 50px);
+    margin-bottom: 60px;
+    z-index: 1000;
+}
+
+#head {
+    background-color: rgba(69, 69, 69, 0.9);
+    height: 50px;
+    line-height: 50px;
+    z-index: -1000;
+    ul {
+        text-align: center;
+        font-size: 30px;
+        a {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+}
+
+#tracks {
+    margin-top: -5px;
+    margin-right: 250px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(200, 200, 200, .7);
+}
+
+#controls {
+    background-color: rgba(69, 69, 69, .9);
+    margin-right: -300px;
+    margin-top: -100px;
+    right: 300px;
+    width: 300px;
+    position: fixed;
+    height: 100%;
+}
+
+#album-art {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 250px;
+    width: 250px;
+    float: center;
+    margin-left: 25px;
+    margin-top: 120px;
+}
+
+.sidebar-nav {
+    margin-top: 20%;
+    float: center;
+    list-style-type: none;
+    li {
+        margin-top: 10px;
+        text-align: center;
+        a {
+            cursor: default;
+        }
+        #volume {
+            float: left;
+            margin-left: -15px;
+        }
+    }
+}
+
+#buttons {
+    margin-right: 15px;
+}
+
+.audiojs {
+    .play-pause {
+        width: 0px;
+        height: 0px;
+    }
+
+    .scrubber {
+        width: 150px;
+    }
+
+    .time {
+        height: 0px;
+        width: 0px;
+    }
+}
+
+#slider {
+    width: 230px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#sidebar {
+    background-color: rgba(69, 69, 69, .5);
+    margin-left: -580px;
+    margin-top: -100px;
+    left: 300px;
+    width: 300px;
+    position: fixed;
+    height: 100%;
+
+    #form {
+        margin-top: 200px;
+    }
+
+    #createacc {
+        margin-top: 200px;
+    }
+
+    #slide-arrow {
+        position: absolute;
+        margin-top: 50%;
+        margin-left: 35px;
+    }
+}
+
+.player-button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #d197fe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #d197fe;
+	box-shadow:inset 0px 1px 0px 0px #d197fe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a53df6), color-stop(1, #460080) );
+	background:-moz-linear-gradient( center top, #a53df6 5%, #460080 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a53df6', endColorstr='#460080');
+	background-color:#a53df6;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #9c33ed;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:65px;
+	line-height:65px;
+	width:175px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #7d15cd;
+    margin-top: 150px;
+    margin-left: 62.5px;
+    cursor: default;
+
+    &:hover {
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #460080), color-stop(1, #a53df6) );
+        background:-moz-linear-gradient( center top, #460080 5%, #a53df6 100% );
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#460080', endColorstr='#a53df6');
+        background-color:#460080;
+    }.classname:active {
+        position:relative;
+        top:1px;
+    }
+}

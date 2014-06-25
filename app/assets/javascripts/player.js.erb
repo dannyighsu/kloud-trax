@@ -1,0 +1,134 @@
+// Globals
+var selected = null;
+
+// Set initial volume, source, slider
+$(document).ready(function() {
+    audio = document.getElementById("audio");
+    playPause = document.getElementById("playpause");
+    volume = document.getElementById('volume');
+    back = document.getElementById('back');
+    forward = document.getElementById('forward');
+    audio.volume = 0.50;
+    $(function() {
+        $("#slider").slider({
+            max: 100,
+            min: 0,
+            value: 50,
+            slide: function(event, ui) {
+                audio.volume = ui.value / 100;
+                if (audio.volume == 0) {
+                    volume.src = "<%= asset_url('Volume.png') %>";
+                } else {
+                    volume.src = "<%= asset_url('Volume_2.png') %>";
+                }
+            }
+        });
+    });
+
+    // Button animations
+    $("#back").hover(
+        function() {
+            back.src = "<%= asset_url('Back_2.png') %>";
+        },
+        function() {
+            back.src = "<%= asset_url('Back.png') %>";
+        }
+    );
+
+    $("#back").click(
+        function() {
+            back.src = "<%= asset_url('Back.png') %>";
+            window.setTimeout(function() {
+                back.src = "<%= asset_url('Back_2.png') %>";
+            }, 50);
+        }
+    )
+
+    $("#forward").hover(
+        function() {
+            forward.src = "<%= asset_url('Forward_2.png') %>";
+        },
+        function() {
+            forward.src = "<%= asset_url('Forward.png') %>";
+        }
+    );
+
+    $("#forward").click(
+        function() {
+            forward.src = "<%= asset_url('Forward.png') %>";
+            window.setTimeout(function() {
+                forward.src = "<%= asset_url('Forward_2.png') %>";
+            }, 50);
+        }
+    )
+
+    $("#playpause").hover(
+        function() {
+            if (playpause.src == qualifyURL("<%= asset_url('Play.png') %>")) {
+                playpause.src = "<%= asset_url('Play_2.png') %>";
+            } else {
+                playpause.src = "<%= asset_url('Pause_2.png') %>";
+            }
+        }, function() {
+            if (playpause.src == qualifyURL("<%= asset_url('Play_2.png') %>")) {
+                playpause.src = "<%= asset_url('Play.png') %>";
+            } else {
+                playpause.src = "<%= asset_url('Pause.png') %>";
+            }
+        }
+    )
+
+    //Show/hide the sidebar
+    $("#sidebar").hover(
+        function() {
+            $(this).animate({marginLeft: -300}, 1000, 'easeOutExpo');
+            document.getElementById('slide-arrow').src =
+            "<%= asset_url('slide-arrow.png') %>";
+        },
+        function() {
+            $(this).animate({marginLeft: -580}, 1000, 'easeOutExpo');
+            document.getElementById('slide-arrow').src =
+            "<%= asset_url('slide-arrow-2.png') %>";
+        }
+    );
+
+    //Kloudless authenticator
+    Kloudless.authenticator($('#create-acc'),
+        {
+            'app_id': '-Kloudless App ID Here-'
+        },
+        function(err, result) {
+            if (err) {
+                alert('Error:', err);
+                return;
+            }
+            window.location = '/accounts/create?accountid=' + result.id + '&service=' + result.service;
+        }
+    );
+
+    // Set track border colors on click
+    $("li.track").click(function() {
+        if (selected) {
+            selected.css({'border': 'none'});
+        }
+        $(this).css({'border': 'groove', 'border-color': 'wheat'});
+        selected = $(this);
+    });
+
+});
+
+function play() {
+    if (document.getElementById('playpause').src ==
+    qualifyURL("<%= asset_path('Play_2.png') %>")) {
+        audio['play']();
+        playPause.src = "<%= asset_url('Pause_2.png') %>";
+    } else {
+        audio['pause']();
+        playPause.src = "<%= asset_url('Play_2.png') %>";
+    }
+}
+
+function pause() {
+    audio['pause']();
+    playPause.src = "<%= asset_url('Play_2.png') %>";
+}

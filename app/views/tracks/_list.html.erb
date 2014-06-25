@@ -1,0 +1,11 @@
+<div id='track-container' overflow='scroll'>
+  <ul id='tracklist'>
+    <% trackList = getTracks %>
+    <% trackList.each do |track| %>
+      <li class="track" data-title="<%= track.title %>"
+        data-url="<%= track.url %>" data-album-art="<%= track.album_art %>">
+        <%= track.title %>
+      </li>
+    <% end %>
+  </ul>
+</div>

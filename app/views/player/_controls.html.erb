@@ -1,0 +1,17 @@
+<div width=250 height=250>
+  <img id='album-art' src=<%= asset_url('no_album_art.jpg') %>>
+</div>
+
+<ul class="sidebar-nav">
+  <li id='buttons'>
+    <img id='back' src=<%= asset_url('Back.png') %> width=50 height=50>
+    <img id='playpause' src=<%= asset_url('Play.png') %>
+    onclick='play()' width=50 height=50>
+    <img id='forward' src=<%= asset_url('Forward.png') %> width=50 height=50>
+  </li>
+  <li><img id='volume' src=<%= asset_url('Volume_2.png') %> onclick='mute()' width=35 height=35</li>
+  <div id="slider"></div>
+</ul>
+
+<audio class='audio_player' id='audio' preload='auto'/>
+</audio>

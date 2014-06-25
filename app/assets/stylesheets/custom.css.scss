@@ -1,0 +1,63 @@
+@import "bootstrap";
+
+html {
+    background: asset-url('background.png') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    background-color: transparent;
+    height: calc(100% - 50px);
+    width: 100%;
+    position: fixed;
+}
+
+#foot {
+    height: 50px;
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+#logo {
+    margin-left: 20px;
+    margin-top: 0px;
+    color: white;
+    a {
+        color: white;
+    }
+}
+
+footer {
+    margin-top: -15px !important;
+    font-size: 15px !important;
+    margin-left: 35px;
+    margin-right: 35px;
+
+    a {
+        color: white !important;
+
+        &:hover {
+            color: lightblue;
+        }
+    }
+
+    ul {
+        list-style: none;
+        li {
+            float: left;
+            margin-left: 10px;
+        }
+    }
+
+    #pages {
+        float: left;
+        margin-left: -10px;
+    }
+
+    #signout {
+        float: right;
+    }
+}

@@ -1,0 +1,28 @@
+<script>
+window.submitted = false;
+
+$(document).ready(
+    $("#submit-button").click(function() {
+        window.submitted = true;
+    })
+
+    window.onPageUnload(function() {
+        if (!window.submitted) {
+            redirect_to 'accounts/destroy'
+        }
+    })
+)
+</script>
+
+<div class='center hero-unit'>
+  <div id='authenticator'></div>
+  <h1> Enter a New Cloud Account </h1></br>
+  <%= form_for @account, url: {action: "update"} do |f| %>
+    <%= render 'accountfields', :f => f %>
+    <div id='errors'>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: name %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

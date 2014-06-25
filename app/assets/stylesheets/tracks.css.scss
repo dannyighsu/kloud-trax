@@ -1,0 +1,35 @@
+// Place all the styles related to the tracks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.center-block {
+    height: calc(100% - 300px);
+    margin-top: 0px;
+    text-align: center;
+
+    #none{
+        line-height: 25;
+    }
+}
+
+#tracklist {
+    margin-left: 0px;
+
+    li {
+        text-indent: 20px;
+        list-style: none;
+        background: gray;
+        font-size: 15px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: default;
+
+        &:hover {
+            background: rgba(230, 230, 230, 1);
+        }
+    }
+}
