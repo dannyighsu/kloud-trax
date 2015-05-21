@@ -16,7 +16,6 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-<<<<<<< HEAD
 gem 'rails_12factor'
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -29,10 +28,6 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'eventmachine'
 #gem 'taglib-ruby'
-=======
-gem 'omniauth'
-gem 'omniauth-twitter'
->>>>>>> b6b0969... Setting up simple OmniAuth
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
